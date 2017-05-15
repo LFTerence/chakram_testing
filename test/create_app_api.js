@@ -42,12 +42,7 @@ describe("Apps API", function() {
             elements: [{"component": "urn:livefyre:service=designer:component=comments"}]
         };
         newApp = chakram.post("https://api.qa-ext.livefyre.com/"+network+"/apps/v1/", requestData, options)
-    })
-    // it('GetUserDetails', function(){
- 
-    //     this.timeout(5000);
- 
-
+    }) 
     it("should return 201 on success", function () {
         return expect(newApp).to.have.status(201)
         .then(function (response){
